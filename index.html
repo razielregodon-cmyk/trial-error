@@ -1,0 +1,294 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Lioba Lane</title>
+
+    <!-- Connects the external CSS file -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- SIDEBAR -->
+
+    <div id="mySidenav" class="sidenav">
+
+        <a href="javascript:void(0)"
+           class="closebtn"
+           onclick="closeNav()">&times;</a>
+
+        <a href="impact.html">Homepage</a>
+        <a href="about.html">Business Identity</a>
+        <a href="index.html">Products</a>
+        <a href="contact.html">Contact Us</a>
+
+    </div>
+
+<!-- MAIN CONTENT BOX -->
+<main class="main-container">
+
+<div class="side-decoration left-decoration">
+    ꩜<br>❀<br>⌇<br>❀<br>꩜<br>
+    ꩜<br>❀<br>⌇<br>❀<br>꩜<br>
+    ꩜<br>❀<br>⌇<br>❀<br>꩜
+</div>
+
+<div class="side-decoration right-decoration">
+    ꩜<br>❀<br>⌇<br>❀<br>꩜<br>
+    ꩜<br>❀<br>⌇<br>❀<br>꩜<br>
+    ꩜<br>❀<br>⌇<br>❀<br>꩜
+</div>
+   <header>
+    <!-- SIDEBAR BUTTON -->
+    <span class="menu-button" onclick="openNav()" aria-label="Open navigation">
+        ♡
+    </span>
+
+    <!-- CART BADGE -->
+   <button class="cart-badge" onclick="toggleCart()">
+    🛒 Cart (<span id="cartCount">0</span>)
+</button>
+
+    <h1>RASHTA</h1>
+    <p>The Empress</p>
+</header>
+
+<div id="cartPanel" class="cart-panel">
+
+    <h3>Your Rashta Support Cart ♡</h3>
+
+    <div id="cartItems">
+        Your cart is empty. Support Rashta! ♡
+    </div>
+
+    <button onclick="toggleCart()">Close</button>
+
+</div>
+
+    <!-- CHARACTER INFORMATION AND IMAGE -->
+
+    <section class="character-container fade-in">
+
+        <fieldset class="character-info">
+
+            <legend>Character Information</legend>
+
+            <p><strong>Name:</strong> Rashta</p>
+            <p><strong>Title:</strong> Slave Empress</p>
+            <p><strong>Occupation:</strong> Former Empress</p>
+
+        </fieldset>
+
+
+        <div class="rashta-image">
+
+            <img src="Rashie.jpg" alt="Rashta">
+
+        </div>
+
+    </section>
+
+    <div class="ornament-divider">
+    ꩜ ❀ 〰️ ❀ ꩜
+</div>
+
+
+
+<!-- SUPPORT NOTIFICATION -->
+
+<div id="supportNotification"
+     class="support-notification"
+     role="status"
+     aria-live="polite">
+
+    ♡ Rashta love has been shared! ♡
+
+</div>
+
+
+<!-- NOTIFICATION SOUND -->
+
+<audio id="notificationSound"
+       src="noti.mp3"
+       preload="auto">
+</audio>
+
+
+<!-- GALLERY CATEGORY SELECTOR -->
+
+<section class="gallery-selector fade-in">
+
+    <h2>Choose Rashta's Collection</h2>
+
+    <div class="gallery-options">
+
+        <button class="category-button active"
+                onclick="selectGallery('general')">
+            General
+        </button>
+
+        <button class="category-button"
+                onclick="selectGallery('manhwa')">
+            Manhwa
+        </button>
+
+        <button class="category-button"
+                onclick="selectGallery('lightNovel')">
+            Light Novel
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- RASHTA GALLERY -->
+
+<section class="gallery fade-in">
+
+    <h2 style="text-align: center;">
+        Rashta's Gallery
+    </h2>
+
+    <div class="carousel">
+
+        <button class="carousel-arrow left"
+                onclick="previousImage()">
+            &#10094;
+        </button>
+
+        <div class="carousel-track" id="carouselTrack">
+        </div>
+
+        <button class="carousel-arrow right"
+                onclick="nextImage()">
+            &#10095;
+        </button>
+
+    </div>
+
+</section>
+
+<!-- IMAGE LIGHTBOX -->
+
+<div id="imageLightbox" class="lightbox">
+
+    <div class="lightbox-content">
+
+        <button class="lightbox-close" onclick="closeLightbox()">
+            &times;
+        </button>
+
+        <button class="lightbox-arrow left" onclick="changeLightboxImage(-1)">
+            &#10094;
+        </button>
+
+        <img id="lightboxImage" src="" alt="">
+
+        <button class="lightbox-arrow right" onclick="changeLightboxImage(1)">
+            &#10095;
+        </button>
+
+        <div class="lightbox-description">
+            <h3 id="lightboxTitle"></h3>
+            <p id="lightboxText"></p>
+        </div>
+
+    </div>
+
+</div>
+
+<!-- RASHTA SUPPORT BUTTON -->
+
+<section class="support-section fade-in">
+
+    <button class="support-button" onclick="openPurchasePopup()">
+        ♡ Support Rashta ♡
+    </button>
+
+</section>
+
+<!-- PURCHASE POPUP -->
+
+<div id="purchasePopup" class="popup-overlay">
+
+    <div class="purchase-popup">
+
+        <h2>♡ Rashta's Boutique ♡</h2>
+
+        <p>Choose your preferred quantity and size!</p>
+
+        <!-- QUANTITY -->
+
+        <div class="popup-quantity">
+
+            <label>Quantity</label>
+
+            <div class="quantity-controls">
+
+                <button onclick="changeQuantity(-1)">−</button>
+
+                <span id="productQty">1</span>
+
+                <button onclick="changeQuantity(1)">+</button>
+
+            </div>
+
+        </div>
+
+        <!-- SIZE -->
+
+        <div class="popup-size">
+
+            <label for="productSize">Choose your size</label>
+
+            <select id="productSize">
+
+                <option value="">Select a size</option>
+                <option value="S">Small</option>
+                <option value="M">Medium</option>
+                <option value="L">Large</option>
+                <option value="XL">Extra Large</option>
+
+            </select>
+
+        </div>
+
+        <!-- BUTTONS -->
+
+        <div class="popup-buttons">
+
+            <button class="add-cart-button" onclick="addToCart()">
+                Add to Cart
+            </button>
+
+            <button class="cancel-button" onclick="closePurchasePopup()">
+                Cancel
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- PROMO CODE -->
+<div class="promo-section" style="text-align: center; margin: 20px auto; max-width: 300px;">
+    <input type="text" id="promoInput" placeholder="Enter promo code (try WINNER)" style="padding: 8px; width: 60%; border: 2px solid #c9889a; border-radius: 10px 0 0 10px; outline: none;">
+    <button onclick="applyPromo()" style="padding: 8px 12px; background: #612234; color: white; border: 2px solid #612234; border-radius: 0 10px 10px 0; cursor: pointer; font-weight: bold;">Apply</button>
+    <p id="promoMessage" style="font-size: 12px; margin-top: 5px; font-weight: bold;"></p>
+</div>
+</main>
+
+
+<!-- JAVASCRIPT -->
+
+<script src="script.js"></script>
+
+</body>
+</html>

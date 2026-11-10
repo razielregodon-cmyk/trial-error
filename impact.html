@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Lioba Lane</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- SIDEBAR -->
+
+    <div id="mySidenav" class="sidenav">
+
+        <a href="javascript:void(0)"
+           class="closebtn"
+           onclick="closeNav()">&times;</a>
+
+        <a href="impact.html">Homepage</a>
+        <a href="about.html">Business Identity</a>
+        <a href="index.html">Products</a>
+        <a href="contact.html">Contact Us</a>
+
+    </div>
+
+<!-- MAIN CONTENT BOX -->
+<main class="main-container">
+
+<div class="side-decoration left-decoration">
+    ꩜<br>❀<br>⌇<br>❀<br>꩜<br>
+    ꩜<br>❀<br>⌇<br>❀<br>꩜<br>
+    ꩜<br>❀<br>⌇<br>❀<br>꩜
+</div>
+
+<div class="side-decoration right-decoration">
+    ꩜<br>❀<br>⌇<br>❀<br>꩜<br>
+    ꩜<br>❀<br>⌇<br>❀<br>꩜<br>
+    ꩜<br>❀<br>⌇<br>❀<br>꩜
+</div>
+   <header>
+    <!-- SIDEBAR BUTTON -->
+    <span class="menu-button" onclick="openNav()" aria-label="Open navigation">
+        ♡
+    </span>
+
+    <!-- CART BADGE -->
+   <button class="cart-badge" onclick="toggleCart()">
+    🛒 Cart (<span id="cartCount">0</span>)
+</button>
+
+    <h1>RASHTA</h1>
+    <p>The Empress</p>
+</header>
+
+<div id="cartPanel" class="cart-panel">
+
+    <h3>Your Rashta Support Cart ♡</h3>
+
+    <div id="cartItems">
+        Your cart is empty. Support Rashta! ♡
+    </div>
+
+    <button onclick="toggleCart()">Close</button>
+
+</div>
+
+    <!-- CHARACTER INFORMATION AND IMAGE -->
+
+ <div class="ornament-divider">
+    ꩜ ❀ 〰️ ❀ ꩜
+</div>
+
+<!-- NEW PRODUCT POPUP -->
+<div id="newProductPopup" class="promo-popup">
+
+    <div class="promo-content">
+
+        <button class="promo-close" onclick="closePromo()">
+            &times;
+        </button>
+
+        <p class="promo-label">♡ NEW ARRIVAL ♡</p>
+
+        <h2>Check Out Our Newest Product!</h2>
+
+        <h3>The Button Up Peplum Top by Lioba Lane</h3>
+
+        <p>
+            A special addition to our collection!
+            Check it out now!
+        </p>
+
+        <a href="index.html" class="promo-button">
+            View Product ♡
+        </a>
+
+    </div>
+
+</div>
+ <div class="ornament-divider">
+    ꩜ ❀ 〰️ ❀ ꩜
+</div>
+
+    <section class="character-container fade-in">
+
+<fieldset class="character-info homepage-info">
+            <legend>Character Information</legend>
+
+            <p><strong>Name:</strong> Prior to the series, Rashta was sold into slavery by her own neglectful father, who did so to save himself from paying for his own crimes and abandoned her even after he paid his debts. For most of her life, she belonged to the Rimwell Estate, where she met the heir, Alan Rimwell. She became pregnant with his child, a situation which greatly angered her owner, Viscount Lotteshu. In order to "keep her in check", Lotteshu pretended to have her newborn son, Ian, killed after birth. She was told that her child had died, received a dead baby to hold, and did not get the chance to meet Ian.
+
+</p>
+
+        </fieldset>
+        <div class="rashta-image">
+            <img src="Rashie.jpg" alt="Rashta">
+
+        </div>
+    </section>
+
+<!-- JAVASCRIPT -->
+
+<script src="script.js"></script>
+
+</body>
+</html>
